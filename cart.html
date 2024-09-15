@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="men.html">Mens</a>
+            <a href="women.html">Women</a>
+            <a href="kids.html">Kids</a>
+            <a href="new.html">New Arrivals</a>
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+            <h3>Promocode:DISCOUNT10</h3>
+            <p>(use the promocode for discount)</p>
+    <main class="cart-main">
+        <section id="cart">
+            <h2>Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be inserted here -->
+            </div>
+        </section>
+        <section class="discount">
+            <div id="promo-code">
+                <input type="text" id="promo-input" placeholder="Enter promo code">
+                <button onclick="applyPromoCode()">Apply</button>
+            </div>
+            <div id="cart-total">Total: &#8377;<span id="total-price"><p>Total Price:<span id="total-price">0.00</span></p></span></div>
+            <button onclick="checkout()">Checkout</button>
+        </section>
+    </main>
+
+    <footer class="cart-foot">
+        <p>&copy; 2024 Clothing Store. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        updateCart(); // Ensure cart is updated when the page loads
+    </script>
+</body>
+</html>
